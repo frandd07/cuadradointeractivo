@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 .cuadrado {
@@ -14,7 +15,10 @@
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s, box-shadow 0.5s, transform 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s, transform 0.5s; 
+  animation: opacidad 1s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
 }
 
 .cuadrado:hover {
@@ -24,4 +28,34 @@
 
 .cuadrado.clicado {
   transform: rotate(45deg) scale(1.5);
+}
+
+@keyframes opacidad {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.circulo-detras,
+.circulo-delante {
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.circulo-detras {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.circulo-delante {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 0, 0, 0.5);
+  z-index: 3;
 }
