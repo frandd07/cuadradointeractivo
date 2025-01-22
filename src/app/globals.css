@@ -9,20 +9,19 @@
 .cuadrado {
   width: 200px;
   height: 200px;
-  background-color: #1B065E; /* Color de fondo inicial */
-  border: 2px solid #FF47DA; /* Borde */
-  border-radius: 10px; /* Esquinas redondeadas */
-  cursor: pointer; /* Para indicar que es interactivo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
-  transition: background-color 0.5s, box-shadow 0.5s, transform 0.5s; /* Transición suave para color, sombra y transform */
+  background-color: #1B065E;
+  border: 2px solid #FF47DA;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s, box-shadow 0.5s, transform 0.5s;
 }
 
 .cuadrado:hover {
-  background-color: #FFE347; /* Nuevo color de fondo al hacer hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+  background-color: #FFE347;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .cuadrado.clicado {
-  transform: rotate(45deg) scale(1.5); /* Giro de 45° y aumento de tamaño */
+  transform: rotate(45deg) scale(1.5);
 }
-
